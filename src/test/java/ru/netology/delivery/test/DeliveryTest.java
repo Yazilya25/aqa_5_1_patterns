@@ -1,6 +1,7 @@
 package ru.netology.delivery.test;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import lombok.val;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,6 +19,7 @@ class DeliveryTest {
 
     @BeforeEach
     void setup() {
+        Configuration.holdBrowserOpen = true;
         open("http://localhost:9999");
     }
 
